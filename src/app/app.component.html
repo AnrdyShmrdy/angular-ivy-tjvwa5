@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<div [formGroup]="ourForm">
+  first control: <input type="text" formControlName="firstControl">
+</div>
+
+<div>
+  <button (click)="logOurControlValue()">LOG</button>
+</div>
+<p *ngIf="ourForm.get('firstControl').hasError('required')">control is required!</p>
